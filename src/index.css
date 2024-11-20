@@ -1,0 +1,39 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+  
+}
+
+.mainpage-container {
+  width: 100%;
+  height: 100%;
+}
+
+.plantgraph-container {
+  width: 50%;
+  float: left;
+  background-color: #CEEFC3;
+  height: 100%;
+}
+
+.enterpoints-container {
+  width: 50%;
+  float: right;
+  background-color: white;
+  height: 100%;
+}

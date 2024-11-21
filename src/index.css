@@ -250,3 +250,8 @@ p {
 .weekday-meal-container {
   padding-bottom: 15px;
 }
+
+.weekday-ingredients-list span:hover {
+  color: #F75C5C;
+  cursor: pointer;
+}

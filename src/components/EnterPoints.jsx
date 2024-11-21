@@ -12,7 +12,7 @@ const EnterPoints = () => {
             <p>Enter the ingredients for your meals this week</p>
         </div>
         <div className='enterpoints-weekdays-container'>
-            <WeekDay day="Monday"></WeekDay>
+            <WeekDay day="Monday" isActive={true}></WeekDay>
             <WeekDay day="Tuesday"></WeekDay>
             <WeekDay day="Wednesday"></WeekDay>
             <WeekDay day="Thursday"></WeekDay>

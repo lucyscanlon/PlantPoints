@@ -19,6 +19,10 @@ body {
   
 }
 
+p {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
 .mainpage-container {
   width: 100%;
   height: 100%;
@@ -76,15 +80,17 @@ body {
 
 .weekday-container {
   width: 100%;
-  background-color: #F7F7F7;
-  height: 80px;
+  /*background-color: #F7F7F7;*/
+  min-height: 80px;
   border-radius: 10px;
   margin-bottom: 20px;
+  overflow: auto;
 }
 
 .weekday-width-container {
   width: 90%;
   margin: 0 auto;
+  height: 60px;
 }
 
 .weekday-title-container {
@@ -107,6 +113,10 @@ body {
   margin-top: 20px;
 }
 
+.weekday-expand-circle:hover {
+  cursor: pointer;
+}
+
 .weekday-title-container h3 {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: 300;
@@ -121,10 +131,10 @@ body {
 }
 
 .clearinterface-container button {
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 12px;
+  padding-bottom: 12px;
   border: solid 1px #F75C5C;
   background-color: white;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -139,4 +149,104 @@ body {
   border: solid 1px black;
   transition-duration: 0.3s;
   cursor: pointer;
+}
+
+.weekday-dropdown {
+  padding-top: 8.5px;
+  padding-left: 7.5px;
+  font-size: 20px;
+}
+
+.weekday-content-container {
+  width: 100%;
+  overflow: auto;
+  
+}
+
+.weekday-expand-close {
+  width: 50%;
+  margin: 0 auto;
+  height: 50px;
+  text-align: center;
+}
+
+.weekday-expandclose-circle {
+  width: 35px;
+  height: 35px;
+  background-color: white;
+  border-radius: 70px;
+  margin: 0 auto;
+}
+
+.weekday-close-up {
+  font-size: 20px;
+  padding-top: 7.5px;
+}
+
+.weekday-expandclose-circle:hover {
+  cursor: pointer;
+}
+
+.weekday-input-container {
+  width: 90%;
+  margin: 0 auto;
+
+}
+
+.weekday-input-container input {
+  height: 40px;
+  width: 75%;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: none;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 15px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.weekday-instruct {
+  width: 90%;
+  margin: 0 auto;
+  font-size: 14px;
+  padding-bottom: 10px;
+  color: #858585;
+}
+
+.weekday-input-container select {
+  height: 40px;
+  border: none;
+  background-color: #F7F7F7;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  position: relative;
+  bottom: 1px;
+  font-size: 14px;
+}
+
+.weekday-ingredients-container {
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+.weekday-meal-title {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.weekday-meal-title h4 {
+  font-weight: 300;
+}
+
+.weekday-ingredients-list {
+  color: #858585;
+  font-size: 14px;
+  padding-top: 5px;
+}
+
+.weekday-meal-container {
+  padding-bottom: 15px;
 }

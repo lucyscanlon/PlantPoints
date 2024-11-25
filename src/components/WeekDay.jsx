@@ -1,17 +1,18 @@
 import React from 'react'
 import { FaAngleDown, FaAngleUp} from 'react-icons/fa'
 import {useState, useEffect} from 'react'
+import axios from 'axios';
 
 const WeekDay = ({day, isActive}) => {
 
   const [weekDayActive, setWeekDayActive] = useState(false);
-  const [breakfastList, setBreakfastList] = useState(['Apple', 'Porridge', 'Milk']);
+  const [breakfastList, setBreakfastList] = useState([]);
   const [lunchList, setLunchList] = useState([]);
   const [dinnerList, setDinnerList] = useState([]);
   const [snackList, setSnackList] = useState([]);
   const [inputValue, setInputValue] = useState("");
-  const [mealValue, setMealValue] = useState('Breakfast');
-  const [clearAllButton, setClearAllButton] = useState(false);
+  const [mealValue, setMealValue] = useState('breakfast');
+  const [nutrition, setNutrition] = useState([]);
 
   const isActiveColour = {
     backgroundColor: '#CEEFC3',
@@ -44,11 +45,39 @@ const WeekDay = ({day, isActive}) => {
 
   const handleKeyDown = event => {
     if(event.key === 'Enter') {
+      getIngredient(inputValue);
       addItem();
     }
   }
 
-  console.log(mealValue);
+  const getIngredient = async (query) => {
+    await axios.get('https://api.spoonacular.com/food/ingredients/search', {
+      params: {
+        query,
+        apiKey: '8a2f4935f99c4d45ab47cc78e3309807',
+      }
+    }).then(res => {
+      console.log(res.data);
+
+      const nutritionInfo = res.data.results[0];
+
+      console.log(nutritionInfo.id);
+
+      axios.get(`https://api.spoonacular.com/food/ingredients/${nutritionInfo.id}/information?amount=1`, {
+        params: {
+          apiKey: '8a2f4935f99c4d45ab47cc78e3309807',
+        }
+      }).then(response => {
+        console.log(response);
+      })
+
+    }).catch(err => {
+      console.log("ERROR!")
+    })
+
+    
+    
+  }
   
 
   return (

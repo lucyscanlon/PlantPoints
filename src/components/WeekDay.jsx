@@ -11,6 +11,7 @@ const WeekDay = ({day, isActive}) => {
   const [snackList, setSnackList] = useState([]);
   const [inputValue, setInputValue] = useState("");
   const [mealValue, setMealValue] = useState('Breakfast');
+  const [clearAllButton, setClearAllButton] = useState(false);
 
   const isActiveColour = {
     backgroundColor: '#CEEFC3',

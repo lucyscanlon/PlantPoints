@@ -247,6 +247,10 @@ p {
   padding-top: 5px;
 }
 
+.weekday-ingredients-list span {
+  text-transform: capitalize;
+}
+
 .weekday-meal-container {
   padding-bottom: 15px;
 }
